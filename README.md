@@ -50,3 +50,6 @@ jobs:
 
 ## More
 For more info on how to reference Actions in your workflow files, please check [this article by Github](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow)
+
+## Need more help?
+Do you need help customising this action or workflow for your needs? Or do you need help automating your cloud infrastructure? Drop us a line at [56k.cloud](https://56k.cloud).
