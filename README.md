@@ -41,7 +41,7 @@ jobs:
       - name: Build the website
         run: <commands_to_build_the_site_and_store_the_output_in_'./build'>
       - name: Deploy Netlify
-        uses: danachim/gh-action-deploy-netlify@master
+        uses: danachim/gh-action-deploy-netlify@v1
         with:
           AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
