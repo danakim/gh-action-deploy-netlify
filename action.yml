@@ -1,0 +1,31 @@
+name: 'Deploy to Netlfiy'
+author: 'Dan Achim'
+description: 'Deploy the contents of a directory to Netlify'
+
+inputs:
+  AUTH_TOKEN:
+    description: 'The authentication token for Netlify'
+    required: true
+    default: ''
+
+  SITE_ID:
+    description: 'The Netlify site ID to which to deploy to'
+    required: true
+    default: ''
+
+  DEPLOY_PROD:
+    description: 'Deploy or not to production'
+    required: false
+    default: ''
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.AUTH_TOKEN }}
+    - ${{ inputs.SITE_ID }}
+    - ${{ inputs.DEPLOY_PROD }}
+
+branding:
+  icon: upload-cloud
+  color: green
