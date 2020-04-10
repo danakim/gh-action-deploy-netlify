@@ -39,9 +39,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Build the website
-        run: <commands_to_build_the_site_and_store_the_output_in_'./build'>
+        run: |
+          mkdir -p /home/runner/work/_temp/_github_home/build
+          <commands_to_build_the_site_and_store_the_output_in_'/home/runner/work/_temp/_github_home/build'>
       - name: Deploy Netlify
-        uses: danachim/gh-action-deploy-netlify@v1
+        uses: danakim/gh-action-deploy-netlify@master
         with:
           AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
